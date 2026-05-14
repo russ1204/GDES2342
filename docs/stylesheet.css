@@ -102,23 +102,23 @@ body {
     background-color: #DCE4E1;
 }
 
-.mbc-header .schedule_btn {
+.btn {
     background-color: var(--color-purple);
     margin: 1vw;
-    aspect-ratio: 3/2;
     text-align: center;
     align-content: center;
     padding: 1vw;
 }
-.mbc-header .schedule_btn a {
+.btn a {
     color: white;
-    font-family: var(--font-extra);
+    font-family: 'Bebas Neue', sans-serif;
     text-decoration: none;
     font-size: 1.5vw;
     letter-spacing: 0.05em;
     font-weight: lighter;
+    line-height: 1;
 }
-.mbc-header .schedule_btn:hover {
+.btn:hover {
     background: var(--color-purple-dark);
 }
 
@@ -206,9 +206,8 @@ body {
     font-weight: bolder;
     width: 100%;
     margin: 3vw;
-
-
 }
+
 #home .home_quote img {
     position: absolute;
     top: 0;
@@ -217,6 +216,8 @@ body {
     width: 23vw;
     z-index: -1;
 }
+
+
 
 
 
@@ -276,7 +277,9 @@ body {
 .services_band p {
     font-family: 'Nunito Sans', sans-serif;
     font-size: 1vw;
-    color: var(--color-mauve);
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color: var(--color-purple);
     background-color: white;
     height: 100%;
     padding: 1vw;
@@ -377,9 +380,14 @@ body {
     background-color: white;
     padding: 1vw;
     border-radius: 1vw;
-}
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;}
+
 #why .why_experiences .testimonial .attribution {
     align-self: flex-end;
+    font-weight: bolder;
+
 
 }
 
@@ -444,13 +452,70 @@ body {
 #stats .stat_item .mbc {}
 
 /*Or this one */
-#info_bar {}
-#info_bar .model_of_care h3 {}
-#info_bar .model_of_care p {}
-#info_bar .location h3 {}
-#info_bar .location p {}
-#info_bar .clinic_btn {}
+#info_bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#info_bar .drawing_video {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-purple);
+    width: 100%;
+    justify-content: space-around;
+    margin: 3vw;
+    padding: 2vw;
+    gap: 1vw;
+}
+#info_bar .drawing_video video {
+    background-color: var(--color-purple);
+    width: 100%;
+}
 
+#info_bar .drawing_video p {
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1vw;
+    color: white;
+    text-align: center;
+
+
+}
+#info_bar .info_loco {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+}
+#info_bar .info_loco .info_text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 3vw;
+}
+#info_bar .location {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2vw;
+}
+
+#info_bar .location h3 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+#info_bar .location p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    font-size: 1vw;
+
+}
 /* */
 #footer {
     background: var(--color-green);
@@ -521,14 +586,40 @@ body {
 }
 
 #footer .footer_top .footer_community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    height: fit-content;
+
 }
 #footer .footer_community h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5vw;
 }
 #footer .footer_socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1vw;
 }
 #footer .social_dot {
+    background-color: var(--color-purple);
+    width: 5vw;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
-#footer .social_dot:hover {}
+#footer .social_dot:hover {
+    background-color: var(--color-purple-dark);
+}
+#footer .social_dot img {
+    width: 60%;
+}
 #footer .footer_mission {
 }
 
