@@ -1,0 +1,650 @@
+
+/*reset base page*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --font-heading: 'Raleway', sans-serif, semi-bold, 0.05;
+    --font-body:    'Nunito Sans', sans-serif, normal, 0.05em;
+    --font-extra:   'Bebas Neue', sans-serif;
+
+    --color-green:        #7A998C;
+    --color-lightgreen:   #DCE4E1;
+    --color-purple:        #672A4E;
+    --color-purple-dark:   #4E1F3B;
+    --color-mauve:       #73636F;
+    --color-mauve-tint:    rgba(115, 99, 111, 0.30);
+}
+
+body {
+    font-family: Raleway, sans-serif, semi-bold;
+    font-weight: 700;
+}
+
+.mbc-page {
+    width: 1440px;
+    margin: 0 auto;
+    background: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.mbc-header {
+    display: flex;
+    flex-direction: row;
+    height: 10vw;
+    padding: 1vw;
+}
+
+.mbc-header .logo {
+    height: 110%;
+    align-self: center;
+    align-items: center;
+}
+.mbc-header .logo img {
+    height: 100%;
+
+
+}
+
+
+.mbc-header .header_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: center;
+    padding: 1vw;
+    padding-top: 0;
+    width: 100%;
+    gap: .3vw;
+
+    align-self: center;
+}
+
+
+.mbc-header .header_text h1 {
+    font-family: var(--font-extra);
+    font-weight: 400;
+    font-size: 3.5vw;
+    text-align: center;
+    border-bottom: solid 1px var(--color-green);
+    width: 100%;
+    line-height: 1;
+    color: #7A998C;
+}
+
+.mbc-header .navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: stretch;
+    width: 100%;
+}
+
+.mbc-header .navigation a {
+    font-family: var(--font-body);
+    font-size: 1.5vw;
+    line-height: 1;
+    height: 100%;
+    transition: color .2s ease;
+    color: black;
+    text-decoration: none;
+    text-align: center;
+    padding:1vw;
+    width: 100%;
+}
+
+.mbc-header .navigation a:hover {
+    background-color: #DCE4E1;
+}
+
+.btn {
+    background-color: var(--color-purple);
+    margin: 1vw;
+    text-align: center;
+    align-content: center;
+    padding: 1vw;
+}
+.btn a {
+    color: white;
+    font-family: 'Bebas Neue', sans-serif;
+    text-decoration: none;
+    font-size: 1.5vw;
+    letter-spacing: 0.05em;
+    font-weight: lighter;
+    line-height: 1;
+}
+.btn:hover {
+    background: var(--color-purple-dark);
+}
+
+
+
+/*home*/
+#home {
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 50vw;
+    align-items: flex-start;
+}
+#home .home_photo_banner {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 20vw;
+    overflow: hidden;
+    background: url("./files/HomeBanner.png") center / cover no-repeat;
+    z-index: -1;
+}
+
+#home .home_text {
+    background: var(--color-green);
+    margin: 8vw;
+    margin-top: 10vw;
+    padding: 3vw;
+    width: 42%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+#home .home_text h2 {
+    font-family: Raleway, sans-serif, semi-bold;
+    font-size: 3.5vw;
+    letter-spacing: 0.05em;
+
+
+}
+#home .home_text p {
+    font-family: 'Nunito Sans', sans-serif, normal;
+    font-size: 2vw;
+    font-weight: normal;
+    padding-right: 3vw;
+}
+#home .home_text a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5vw;
+    background: var(--color-purple);
+    width: fit-content;
+    align-self: center;
+    font-size: 2vw;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: normal;
+}
+
+#home .home_text a:hover {
+    background: var(--color-purple-dark);
+}
+
+#home .home_quote {
+    align-self: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    width: 35%;
+
+}
+
+#home .home_quote p {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 1.5vw;
+    background: var(--color-purple);
+    font-size: 2vw;
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: bolder;
+    width: 100%;
+    margin: 3vw;
+}
+
+#home .home_quote img {
+    position: absolute;
+    top: 0;
+    right: 9vw;
+    aspect-ratio: 984/1952 ;
+    width: 23vw;
+    z-index: -1;
+}
+
+
+
+
+
+
+
+/* === SERVICES === */
+#services {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+#services h2 {
+    height: 10%;
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 2vw;
+    text-align: center;
+    padding: 0.5vw;
+    color: var(--color-purple);
+}
+#services .services_band {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+    padding: 5vw;
+    padding-top: 0;
+    padding-bottom: 3vw;
+    gap: 5vw;
+}
+
+#services .service_card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: var(--color-lightgreen);
+    text-align: center;
+    height: 100%;
+}
+.service_card .star {
+    margin-top: 1vw;
+    aspect-ratio: 1/1;
+    height: 7vw;
+}
+
+.services_band h3 {
+    width: 100%;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.05em;
+    font-weight: bolder;
+    font-size: 1.8vw;
+    padding: 1vw;
+}
+.services_band p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1vw;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    color: var(--color-purple);
+    background-color: white;
+    height: 100%;
+    padding: 1vw;
+}
+
+/*banner*/
+#banner {
+    width: 100%;
+    height: 20vw;
+    background: url("./files/MBCBanner.png") center / cover no-repeat;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+}
+#banner .banner_plate {
+    align-self: center;
+    width: 40%;
+    background-color: var(--color-mauve-tint);
+    align-content: center;
+}
+
+#banner .banner_plate h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    font-size: 3vw;
+
+    color: white;
+    text-align: center;
+    width: 100%;
+    padding: 1vw;
+}
+
+/* === WHY US === */
+#why {
+    border: solid 1px var(--color-mauve);
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+
+    padding: 5vw;
+    padding-top: 2vw;
+    gap: 4vw;
+
+}
+#why .why_text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    width: 100%;
+
+}
+#why .why_text h2 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    font-size: 2vw;
+}
+#why .why_text p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    font-size: 1.8vw;
+}
+
+#why .why_display {
+    width: fit-content;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+#why .why_experiences {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    background-color: var(--color-green);
+    padding: 2vw;
+    margin-right: 5vw;
+    gap: 1vw;
+    z-index: 2;
+}
+
+#why .why_experiences h3 {
+    font-family: 'Raleway', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    font-size: 1.5vw;
+    text-align: center;
+    width: 100%;
+    color: white;
+}
+
+#why .why_experiences .testimonial {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 1vw;
+    border-radius: 1vw;
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;}
+
+#why .why_experiences .testimonial .attribution {
+    align-self: flex-end;
+    font-weight: bolder;
+
+
+}
+
+#why .why_info {
+    position: relative;
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    overflow: visible;
+}
+
+
+#why .why_info .why_bread {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 10vw;
+    width: fit-content;
+    overflow: visible;
+}
+
+#why .why_info .why_bread img {
+    height: 18vw;
+}
+
+
+#why .why_info .why_stat {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1vw;
+    width: 100%;
+}
+#why .why_info .why_stat .num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    font-size: 3vw;
+    color: var(--color-purple);
+    text-align: center;
+
+}
+#why .why_info .why_stat .lbl {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1vw;
+    color: var(--color-mauve);
+    text-align: center;
+    width: 5vw;
+
+}
+
+
+
+/*I did not have time to add this part unfortunately*/
+#stats {}
+#stats .stat_item {}
+#stats .stat_item .national {}
+#stats .stat_item .mbc {}
+
+/*Or this one */
+#info_bar {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#info_bar .drawing_video {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--color-purple);
+    width: 100%;
+    justify-content: space-around;
+    margin: 3vw;
+    padding: 2vw;
+    gap: 1vw;
+}
+#info_bar .drawing_video video {
+    background-color: var(--color-purple);
+    width: 100%;
+}
+
+#info_bar .drawing_video p {
+    font-family: 'Nunito Sans', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1vw;
+    color: white;
+    text-align: center;
+
+
+}
+#info_bar .info_loco {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 5vw;
+}
+#info_bar .info_loco .info_text {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 3vw;
+}
+#info_bar .location {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 2vw;
+}
+
+#info_bar .location h3 {
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0.05em;
+    font-size: 1.5vw;
+    padding: 1vw;
+}
+#info_bar .location p {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+    font-size: 1vw;
+
+}
+/* */
+#footer {
+    background: var(--color-green);
+    color: var(--mbc-white);
+    display: flex;
+    flex-direction: column;
+    padding: 2vw;
+    color: white;
+}
+#footer .footer_top{
+    display: flex;
+    flex-direction: row;
+}
+#footer .footer_bottom {
+    display: flex;
+    flex-direction: row;
+}
+#footer .footer_top .footer_logo .img {
+    height: 100%;
+}
+
+#footer .footer_top .footer_cols {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin: 3vw;
+    margin-top: 0;
+    height: 100%;
+}
+
+#footer .footer_col {
+    width: 100%;
+    height: 100%;
+    padding: 0.5vw;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+#footer .footer_col h4 {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 1.2vw;
+}
+#footer .footer_col ul {
+    font-family: 'Nunito Sans', sans-serif;
+    font-weight: lighter;
+    font-size: 1vw;
+    letter-spacing: 0.05em;
+    padding-left: 1vw;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: .5vw;
+}
+#footer .footer_col li {
+    line-height: 1;
+    letter-spacing: 0.04em;
+    color: var(--mbc-white);
+    cursor: pointer;
+    transition: opacity .2s ease;
+    padding: 0.25vw;
+}
+#footer .footer_col li:hover {
+    color: var(--color-lightgreen);
+    text-decoration: underline;
+}
+
+#footer .footer_top .footer_community {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1vw;
+    height: fit-content;
+
+}
+#footer .footer_community h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5vw;
+}
+#footer .footer_socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    gap: 1vw;
+}
+#footer .social_dot {
+    background-color: var(--color-purple);
+    width: 5vw;
+    border-radius: 100%;
+    aspect-ratio: 1/1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#footer .social_dot:hover {
+    background-color: var(--color-purple-dark);
+}
+#footer .social_dot img {
+    width: 60%;
+}
+#footer .footer_mission {
+}
+
+#footer .footer_locations {
+}
+#footer .footer_loc {
+
+}
+#footer .footer_loc p {
+
+}
+#footer .footer_loc .loc_city {
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
